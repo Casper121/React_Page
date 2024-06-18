@@ -1,13 +1,10 @@
 import React from "react"
+import ReportTable from "./components/ReportTable"
 
 const App = () => {
 
-    const text = "Hello World"
-
-    return(
-        <div>
-            {text}
-        </div>
+    return (
+        <ReportTable/>
     )
 
 }
