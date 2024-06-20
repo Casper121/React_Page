@@ -3,13 +3,11 @@ import {
     getCoreRowModel,
     flexRender,
     getPaginationRowModel,
-    getSortedRowModel,
-    SortingState,
     getFilteredRowModel,
 } from "@tanstack/react-table"
 import data from './data.json'
 import { columns } from "./Column"
-import '../index.css'
+import '../ReportTable.css'
 import { useState } from "react";
 
 const ReportTable = () => {
