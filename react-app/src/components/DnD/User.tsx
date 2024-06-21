@@ -1,5 +1,6 @@
 import { useSortable } from "@dnd-kit/sortable"
 import { CSS } from "@dnd-kit/utilities"
+import '../DnD/User.css'
 
 const User = ({user}: any) => {
 
@@ -18,7 +19,6 @@ const User = ({user}: any) => {
         transition,
     }
 
-    //NEEDS STYLE
     return(
         <div
             style={style}
@@ -26,7 +26,8 @@ const User = ({user}: any) => {
             {...attributes}
             {...listeners}
         >
-            {user.name}
+            <h2>{user.name}</h2>
+            <h2>{user.desc}</h2>
         </div>
     )
 

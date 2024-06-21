@@ -7,7 +7,7 @@ import {
 } from "@tanstack/react-table"
 import data from './data.json'
 import { columns } from "./Column"
-import '../ReportTable.css'
+import '../InfoTable/ReportTable.css'
 import { useState } from "react";
 
 const ReportTable = () => {

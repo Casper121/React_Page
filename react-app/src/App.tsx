@@ -1,11 +1,14 @@
-import React from "react"
-//import ReportTable from "./components/ReportTable"
-import DragAndDrop from "./components/DnD/DragAndDrop"
+import React, { useState } from "react"
+import DragAndDrop from "./components/DnD/DragAndDrop";
+import ReportTable from "./components/InfoTable/ReportTable";
 
 const App = () => {
 
     return (
-        <DragAndDrop/>
+        <>
+            <DragAndDrop />
+            {/*<ReportTable/>*/}
+            </>
     )
 }
 
