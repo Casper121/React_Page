@@ -1,14 +1,14 @@
-import { DndContext, closestCorners } from "@dnd-kit/core"
-import { SortableContext, horizontalListSortingStrategy, arrayMove } from "@dnd-kit/sortable";
+import { DndContext, closestCenter } from "@dnd-kit/core"
+import { SortableContext, arrayMove, verticalListSortingStrategy } from "@dnd-kit/sortable";
 import { useState } from "react";
 import User from "./User";
 
 const DragAndDrop = () => {
 
     const [people, setPeople] = useState([
-        { id: 1, name: "John", desc: "Jung, 23 Jahre alt, Sportler" },
-        { id: 2, name: "Frieda", desc: "Jung, 24 Jahre alt, Sportler" },
-        { id: 3, name: "Thomas", desc: "69 Jahre alt" },
+        { id: 1, name: "John"},
+        { id: 2, name: "Frieda" },
+        { id: 3, name: "Thomas" },
     ]);
 
     const handleDragEnd = (event: { active: any; over: any; }) => {
@@ -18,15 +18,16 @@ const DragAndDrop = () => {
         const newIndex = people.findIndex(person => person.id === over.id)
         setPeople(arrayMove(people, oldIndex, newIndex))
     }
+    console.log(people)
 
     return (
         <DndContext
-            collisionDetection={closestCorners}
+            collisionDetection={closestCenter}
             onDragEnd={handleDragEnd}
         >
             <SortableContext
                 items={people}
-                strategy={horizontalListSortingStrategy}
+                strategy={verticalListSortingStrategy}
             >
                 {people.map((user) => (
                     <User user={user} />

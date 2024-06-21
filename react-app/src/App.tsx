@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import DragAndDrop from "./components/DnD/DragAndDrop";
 import ReportTable from "./components/InfoTable/ReportTable";
 
@@ -6,7 +6,7 @@ const App = () => {
 
     return (
         <>
-            <DragAndDrop />
+            {<DragAndDrop />}
             {/*<ReportTable/>*/}
             </>
     )

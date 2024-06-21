@@ -11,7 +11,7 @@ const User = ({user}: any) => {
         transform,
         transition
     } = useSortable({
-        id: user.id
+        id: user.id,
     })
 
     const style = {
@@ -27,7 +27,6 @@ const User = ({user}: any) => {
             {...listeners}
         >
             <h2>{user.name}</h2>
-            <h2>{user.desc}</h2>
         </div>
     )
 
